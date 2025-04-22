@@ -1,0 +1,436 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- <meta content="height=device-height, initial-scale=1.0" name="viewport"> -->
+	<meta charset="utf-8">
+	<title>Sirindhorn Museum Map</title>
+	<meta content="" name="description">
+	<meta content="" name="keywords">
+
+	<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
+
+	<!-- styles -->
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="object.css" />
+
+	<!-- Google analytics -->
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-81366850-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+
+	<!-- scripts -->
+	<script src="ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/modernizr.js"></script>
+	<script src="js/jquery_cookie.js"></script>
+	<script src="js/jquery.mapbox.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/FBXLoader.js"></script>
+
+
+	<script>
+		window.twttr = (function (d, s, id) {
+			var t, js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js, fjs);
+			return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
+		}(document, "script", "twitter-wjs"));
+	</script>
+
+</head>
+
+<body>
+	<!-- <div id="sence"></div> -->
+	<div class="mapwrapper">
+		<div id="viewport2">
+			<div class="map-3"
+				style="background: url(images/floor2map.png) no-repeat; height: 1432px; width: 2134px; font-family: source-code-pro, sans-serif;">
+				<img src="images/Floor1map.png" alt="" />
+
+
+				<!-- General -->
+				<div class="tt-wrapper floor1tag"></div>
+				<div class="tt-wrapper toilet101"></div>
+				<div class="tt-wrapper toilet102"></div>
+				<div class="tt-wrapper noentry"></div>
+				<a href="index.floor2">
+					<div class="tt-wrapper goup"></div>
+				</a>
+				<div class="tt-wrapper billboard-sitemuseum"></div>
+				<!-- End General -->
+
+				<!-- Dinosaur Internal -->
+				<div class="tt-wrapper dino101"></div>
+				<div class="tt-wrapper dino102"></div>
+				<div class="tt-wrapper dino103"></div>
+				<div class="tt-wrapper dino104"></div>
+				<div class="tt-wrapper dino105"></div>
+				<!-- End Dinosaur Internal -->
+
+				<!-- Internal Object -->
+				<div class="tt-wrapper screen1">
+					<video width="100" height="75" autoplay="autoplay" muted loop>
+						<source src="media/CarnotaurusMovie.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div class="tt-wrapper hybodonshark"></div>
+				<div class="tt-wrapper footprint"></div>
+				<div class="tt-wrapper fish"></div>
+
+
+				<!-- End Internal Object -->
+
+				<!-- Human -->
+				<div class="tt-wrapper walk1"></div>
+				<div class="tt-wrapper jump1"></div>
+				<div class="tt-wrapper drink-water-g1"></div>
+				<div class="tt-wrapper human101"></div>
+				<div class="tt-wrapper human102"></div>
+				<div class="tt-wrapper human103"></div>
+				<!-- EndHuman -->
+
+				<!-- Dinosaur Extenal -->
+				<div class="tt-wrapper dino301"></div>
+				<div class="tt-wrapper dino302"></div>
+				<div class="tt-wrapper dino303"></div>
+				<div class="tt-wrapper dino304"></div>
+				<div class="tt-wrapper dino305"></div>
+				<div class="tt-wrapper dino306"></div>
+				<div class="tt-wrapper dino307"></div>
+				<div class="tt-wrapper dinosauria"></div>
+				<!-- End Dinosaur Extenal -->
+
+				<!-- Landscape -->
+				<div class="tt-wrapper garden1"></div>
+				<div class="tt-wrapper garden2"></div>
+				<div class="tt-wrapper garden3"></div>
+				<div class="tt-wrapper garden4"></div>
+				<div class="tt-wrapper garden5"></div>
+				<div class="tt-wrapper garden6a"></div>
+				<div class="tt-wrapper garden7"></div>
+				<div class="tt-wrapper garden8"></div>
+				<div class="tt-wrapper garden9"></div>
+				<div class="tt-wrapper garden10"></div>
+				<div class="tt-wrapper billboard-sitemuseum"></div>
+				<!-- End Landscape -->
+
+				<!-- Info -->
+				<div class="tt-wrapper dino101-info">
+					<div class="dyk">
+						<span class="tooltip" style="width: 350px;">
+							<div class="title">
+								<h4>ภูเวียงเนเตอร์ แย้มนิยมมิ
+									<br>(Phuwiangvenator Yaemniyommi)
+								</h4>
+							</div>
+							<p><a href="https://en.wikipedia.org/wiki/Phuwiangvenator" style="color: white; text-decoration: underline #5a5afd 2px;">▶️ ภูเวียงเนเตอร์
+									แย้มนิยมมิ (Phuwiangvenator Yaemniyommi)</a>
+								อยู่ในกลุ่ม เมกะแรพเตอร่า ที่มีขาหน้าและขาหลังที่ยาว
+								บ่งบอกถึงการวิ่งเร็ว มีกรงเล็บใหญ่ สถานที่ที่ค้นพยที่แรกคือ อุทยานแห่งชาติภูเวียง
+								และชื่อชนิดนี่ตั้งให้อดีตนักธรณีวิทยา ผู้ค้นพบกระดูกไดโนเสาร์ชิ้นแรกเมื่อปี พ.ศ.
+								2519</p>
+						</span>
+					</div>
+				</div>
+				<div class="tt-wrapper dino102-info">
+					<div class="dyk">
+						<span class="tooltip" style="width: 350px;">
+							<div class="title">
+								<h4>...
+									<br>...
+								</h4>
+							</div>
+							<p>
+								...
+							</p>
+						</span>
+					</div>
+				</div>
+				<div class="tt-wrapper dino103-info">
+					<div class="dyk">
+						<span class="tooltip" style="width: 350px;">
+							<div class="title">
+								<h4>...
+									<br>...
+								</h4>
+							</div>
+							<p>
+								...
+							</p>
+						</span>
+					</div>
+				</div>
+				<div class="tt-wrapper dino104-info">
+					<div class="dyk">
+						<span class="tooltip" style="width: 400px;">
+							<div class="title">
+								<h4><a href="https://en.wikipedia.org/wiki/Phuwiangosaurus"
+									style="color: white; text-decoration: underline #5a5afd 2px;">▶️ ภูเวียงโกซอรัส
+										สิรินธรเน<br>(Phuwiangosaurus sirindhornae)</a></h4>
+							</div>
+							<p>“ยักษ์คอยาวแห่งเทือกเขาภูเวียง”
+								ที่ใช้เวลาทั้งวันไปกับการแทะเล็มใบไม้ด้วยฟันแบบแท่งดินสอที่ไม่เหมาะสมกับการบดเคี้ยว
+								จึงต้องกลืนก้อนกรวดลงไปในกระเพาะเพื่อช่วยในการบดอาหาร “หุบเขาไดโนเสาร์ภูเวียง”
+								เป็นเหมือนบ้านหลังใหญ่ของยักษ์คอยาวแห่งเทือกเขาภูเวียง
+								เพราะมีการค้นพบกระดูกไดโนเสาร์วัยเยาว์จนถึงตัวเต็มวัย ลักษณะ :
+								เป็นไดโนเสาร์กินพืชกลุ่มซอโรพอด คอยาว หางยาว เดินสี่ขา
+								ขนาด : ความยาวประมาณ 15-20 เมตร อายุ : พบในหมวดหินเสาขัว ยุคครีเทเชียสตอนต้น (130
+								ล้านปีก่อน)
+							</p>
+						</span>
+					</div>
+				</div>
+				<div class="tt-wrapper dino105-info">
+					<div class="dyk">
+						<span class="tooltip" style="width: 350px;">
+							<div class="title">
+								<h4><a href="https://en.wikipedia.org/wiki/Phuwiangosaurus"
+									style="color: white; text-decoration: underline #5a5afd 2px;">....</a></h4>
+							</div>
+							<p>...
+							</p>
+						</span>
+					</div>
+				</div>
+				<div class="tt-wrapper dino301-info">
+					<div class="dyk">
+						<span class="tooltip" style="width: 350px;">
+							<div class="title">
+								<h4><a href="https://en.wikipedia.org/wiki/Phuwiangosaurus"
+									style="color: white; text-decoration: underline #5a5afd 2px;">▶️ ภูเวียงโกซอรัส สิรินธรเน
+										(Phuwiangosaurus sirindhornae)</a></h4>
+							</div>
+							<p>“ยักษ์คอยาวแห่งเทือกเขาภูเวียง”
+								ที่ใช้เวลาทั้งวันไปกับการแทะเล็มใบไม้ด้วยฟันแบบแท่งดินสอที่ไม่เหมาะสมกับการบดเคี้ยว
+								จึงต้องกลืนก้อนกรวดลงไปในกระเพาะเพื่อช่วยในการบดอาหาร “หุบเขาไดโนเสาร์ภูเวียง”
+								เป็นเหมือนบ้านหลังใหญ่ของยักษ์คอยาวแห่งเทือกเขาภูเวียง
+								เพราะมีการค้นพบกระดูกไดโนเสาร์วัยเยาว์จนถึงตัวเต็มวัย ลักษณะ :
+								เป็นไดโนเสาร์กินพืชกลุ่มซอโรพอด คอยาว หางยาว เดินสี่ขา
+								ขนาด : ความยาวประมาณ 15-20 เมตร อายุ : พบในหมวดหินเสาขัว ยุคครีเทเชียสตอนต้น (130
+								ล้านปีก่อน)
+							</p>
+						</span>
+					</div>
+				</div>
+
+				<div class="tt-wrapper dino302-info">
+					<div class="dyk">
+						<span class="tooltip" style="width: 350px;">
+							<div class="title">
+								<h4><a href="https://en.wikipedia.org/wiki/Siamosaurus"
+									style="color: white; text-decoration: underline #5a5afd 2px;">▶️ สยามโมซอรัส สุธีธรนิ
+										(Siammosaurus suteethorni)</a></h4>
+							</div>
+							<p>ลักษณะ : เป็นไดโนเสาร์กินเนื้อกลุ่มเทอโรพอด เดิน 2 ขา มีกะโหลกและฟันรูปกรวย
+								คล้ายฟันจระเข้ กินปลาเป็นอาหาร
+								ขนาด : ความยาวประมาณ 6 เมตร อายุ : พบในหมวดหินเสาขัว ยุคครีเทเชียสตอนต้น (130
+								ล้านปีก่อน)
+								สถานที่พบ : อุทยานแห่งชาติภูเวียง จ.ขอนแก่น
+								ที่มาของชื่อ : ชื่อสกุลมาจากชื่อเรียกราชอาณาจักรไทยในอดีต “สยาม”
+								และชื่อชนิดตั้งเพื่อเป็นเกียรติแก่ นายวราวุธ สุธีธร
+								นักธรณีวิทยาผู้ร่วมบุกเบิกการศึกษาบรรพชีวินวิทยาด้านไดโนเสาร์ของไทย
+							</p>
+						</span>
+					</div>
+				</div>
+				<div class="tt-wrapper dino303-info">
+					<div class="dyk">
+						<span class="tooltip" style="width: 350px;">
+							<div class="title">
+								<h4><a href="https://en.wikipedia.org/wiki/Isanosaurus"
+									style="color: white; text-decoration: underline #5a5afd 2px;">▶️ อีสานโนซอรัส
+										อรรถวิภัชน์ชิ<br>(Isanosaurus attavipatchi)</a></h4>
+							</div>
+							<p>ไดโนเสาร์คอยาว หางยาว ขนาด 12-16 เมตร
+								ที่มีลักษณะโบราณที่สุดเท่าที่พบมาใยเอเชียตะวันออกเฉียงใต้ จากลักษณะของการะดูกขาหลัง
+								ท่อนบนและกระดูกสันหลังจัดให้เป็นซอโรพอด ซึ่สามารถแยกออกจากโปรซอโรพอดได้อย่างชัดเจน
+								การค้นพบ อีสานโนซอรัส อรรถวิภัชน์ชิ
+								แสดงให้เห็นว่า แผ่นดินไทยเชื่อมกับแผ่นทวีปเอเชียก่อนยุคไทรแอสซิก
+								และในช่วงไทรแอสซิกตอนปลายได้มีไดโนเสาร์ซอโรพอดปรากฏขึ้นมาแล้ว
+							</p>
+						</span>
+					</div>
+				</div>
+
+				<div class="tt-wrapper dino304-info">
+					<div class="dyk">
+						<span class="tooltip" style="width: 350px;">
+							<div class="title">
+								<h4><a href="https://en.wikipedia.org/wiki/Isanosaurus"
+									style="color: white; text-decoration: underline #5a5afd 2px;">▶️อีสานโนซอรัส
+										อรรถวิภัชน์ชิ<br>(Isanosaurus attavipatchi)</a></h4>
+							</div>
+							<p>ไดโนเสาร์คอยาว หางยาว ขนาด 12-16 เมตร
+								ที่มีลักษณะโบราณที่สุดเท่าที่พบมาใยเอเชียตะวันออกเฉียงใต้ จากลักษณะของการะดูกขาหลัง
+								ท่อนบนและกระดูกสันหลังจัดให้เป็นซอโรพอด ซึ่สามารถแยกออกจากโปรซอโรพอดได้อย่างชัดเจน
+								การค้นพบ อีสานโนซอรัส อรรถวิภัชน์ชิ
+								แสดงให้เห็นว่า แผ่นดินไทยเชื่อมกับแผ่นทวีปเอเชียก่อนยุคไทรแอสซิก
+								และในช่วงไทรแอสซิกตอนปลายได้มีไดโนเสาร์ซอโรพอดปรากฏขึ้นมาแล้ว
+							</p>
+						</span>
+					</div>
+				</div>
+
+				<div class="tt-wrapper dino305-info">
+					<div class="dyk">
+						<span class="tooltip" style="width: 350px;">
+							<div class="title">
+								<h4><a href="https://en.wikipedia.org/wiki/Isanosaurus"
+									style="color: white; text-decoration: underline #5a5afd 2px;">▶️อีสานโนซอรัส
+										อรรถวิภัชน์ชิ<br>(Isanosaurus attavipatchi)</a></h4>
+							</div>
+							<p>ไดโนเสาร์คอยาว หางยาว ขนาด 12-16 เมตร
+								ที่มีลักษณะโบราณที่สุดเท่าที่พบมาใยเอเชียตะวันออกเฉียงใต้ จากลักษณะของการะดูกขาหลัง
+								ท่อนบนและกระดูกสันหลังจัดให้เป็นซอโรพอด ซึ่สามารถแยกออกจากโปรซอโรพอดได้อย่างชัดเจน
+								การค้นพบ อีสานโนซอรัส อรรถวิภัชน์ชิ
+								แสดงให้เห็นว่า แผ่นดินไทยเชื่อมกับแผ่นทวีปเอเชียก่อนยุคไทรแอสซิก
+								และในช่วงไทรแอสซิกตอนปลายได้มีไดโนเสาร์ซอโรพอดปรากฏขึ้นมาแล้ว
+							</p>
+						</span>
+					</div>
+				</div>
+				<div class="tt-wrapper footprint-info">
+					<div class="dyk">
+						<span class="tooltip" style="width: 350px;">
+							<div class="title">
+								<h4><a href="https://en.wikipedia.org/wiki/Phuwiangosaurus"
+									style="color: white; text-decoration: underline #5a5afd 2px;">▶️รอยตีน</a></h4>
+							</div>
+							<p>...
+							</p>
+						</span>
+					</div>
+				</div>
+				<div class="tt-wrapper hybodonshark-info">
+					<div class="dyk">
+						<span class="tooltip" style="width: 440px;">
+							<div class="title">
+								<h4>ไฮโบดอนต์ (Hybodon Shark)</h4>
+							</div>
+							<p><a href="https://en.wikipedia.org/wiki/Hybodontiformes" style="text-decoration: underline #5a5afd 2px;">▶️ไฮโบดอนต์
+									(Hybodont)</a> คือปลากระดูกอ่อนดึกดำบรรพ์ที่หน้าตาคล้ายฉลาม
+								แต่จะต่างจากฉลามโดยมีเงี่ยงหลังอยู่ที่ครีบทั้งสอง
+								เราสามารถแยกความแตกต่างระหว่างเพศได้ โดยตัวผู้จะมีเขาบนหัว
+								และมีแคลสเปอร์เป็นแท่งยาวคล้ายหลอดที่ครีบท้องซึ่งตัวเมียไม่มี
+								โดยไฮโบดอนออดลูกเป็นไข่ในกระเปาะ</p>
+						</span>
+					</div>
+				</div>
+				<div class="tt-wrapper fish-info">
+					<div class="dyk">
+						<span class="tooltip" style="width: 300px;">
+							<div class="title">
+								<h4>...</h4>
+							</div>
+							<p>...</p>
+						</span>
+					</div>
+				</div>
+				<div class="tt-wrapper lab-info">
+					<div class="dyk">
+						<span class="tooltip">
+							<div class="title">
+								<h4>LAB</h4>
+							</div>
+							<p></p>
+						</span>
+					</div>
+				</div>
+				<div class="tt-wrapper theatre-info">
+					<div class="dyk">
+						<span class="tooltip">
+							<div class="title">
+								<h4>Theatre</h4>
+							</div>
+							<p> <img src="images/theatre_billboard.png" height="50%" width="70%">
+								<br>ทุกวันเสาร์-อาทิตย์ และวันหยุดนักขัตฤกษ์
+							</p>
+						</span>
+					</div>
+				</div>
+				<div class="tt-wrapper foodcenter-info">
+					<div class="dyk">
+						<span class="tooltip">
+							<div class="title">
+								<h4>Food Center</h4>
+							</div>
+							<p><a href="#" target="_blank"></a>ร้านอาหารสหัสขันธ์จูลาสสิก<br>Sahatsakhan Jurassic
+								Restaurant</p>
+						</span>
+					</div>
+				</div>
+				<div class="tt-wrapper office-info">
+					<div class="dyk">
+						<span class="tooltip">
+							<div class="title">
+								<h4>OFFICE</h4>
+							</div>
+							<p><a href="#" target="_blank"></a>พื้นที่สำนักงาน</p>
+						</span>
+					</div>
+				</div>
+				<!-- End Info -->
+
+				<!-- 360 View -->
+				<a href="cam101.html"><div class="tt-wrapper cam101"></div></a>
+				<a href="cam102.html"><div class="tt-wrapper cam102"></div></a>
+				<!-- End 360 View -->
+
+			</div>
+			<div class="map-2" style="height: 2148px; width: 3201px;">
+				<img src="images/Floor1map.png" alt="" />
+				<div class="mapcontent">
+
+				</div>
+			</div>
+
+			<div class="map-1" style="height: 2864px; width: 4268px;">
+				<img src="images/Floor1map.png" alt="" />
+				<div class="mapcontent">
+
+				</div>
+			</div>
+
+
+		</div>
+
+	</div>
+
+
+	<div class="floor2press">
+		<a href="floor2.html">Floor2</a>
+	</div>
+
+	<div class="map-control">
+		<a href="#zoom" class="zoom"
+			style="color:white; font-family: Noto Sans Thai; font-size: 24pt; text-decoration: none;">+</a>
+		<a href="#zoom_out" class="back"
+			style="color:white; font-family: Noto Sans Thai; font-size: 24pt; text-decoration: none;">-</a>
+	</div>
+
+	</div>
+
+</body>
+
+<script src="js/three.min.js"></script>
+<script src="js/OrbitControls.js"></script>
+<script src="js/Detector.js"></script>
+
+</html>

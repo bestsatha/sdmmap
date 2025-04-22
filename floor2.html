@@ -1,0 +1,500 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<!-- <meta content="height=device-height, initial-scale=1.0" name="viewport"> -->
+	<title>Sirindhorn Museum Map</title>
+	<meta content="" name="description">
+  	<meta content="" name="keywords">
+
+	<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
+
+	<!-- styles -->
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="object.css" />
+
+	<!-- Google analytics -->
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-81366850-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+
+	<!-- scripts -->
+	<script src="ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/modernizr.js"></script>
+	<script src="js/jquery_cookie.js"></script>
+	<script src="js/jquery.mapbox.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/FBXLoader.js"></script>
+
+
+	<script>
+		window.twttr = (function (d, s, id) {
+			var t, js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js, fjs);
+			return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
+		}(document, "script", "twitter-wjs"));
+	</script>
+
+<script>
+	// สร้าง Scene, Camera, Renderer
+	const scene = new THREE.Scene();
+	const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+	const renderer = new THREE.WebGLRenderer();
+	renderer.setSize(window.innerWidth, window.innerHeight);
+	document.body.appendChild(renderer.domElement);
+  
+	// เพิ่มแสง
+	const light = new THREE.DirectionalLight(0xffffff, 1);
+	light.position.set(0, 1, 1).normalize();
+	scene.add(light);
+  
+	// โหลดโมเดล .fbx
+	const loader = new THREE.FBXLoader();
+	loader.load('3dmodel/201/Tyrant_Lizard_Rex_0912032253.fbx', (fbx) => {
+	  fbx.scale.set(0.1, 0.1, 0.1); // ปรับขนาดโมเดลหากจำเป็น
+	  scene.add(fbx);
+  
+	  // ตั้งค่า animation (ถ้ามี)
+	  const mixer = new THREE.AnimationMixer(fbx);
+	  if (fbx.animations.length > 0) {
+		const action = mixer.clipAction(fbx.animations[0]);
+		action.play();
+	  }
+  
+	  // ฟังก์ชันสำหรับการเรนเดอร์โมเดล
+	  const animate = function () {
+		requestAnimationFrame(animate);
+  
+		// หมุนโมเดล
+		fbx.rotation.y += 0.01;
+  
+		renderer.render(scene, camera);
+	  };
+  
+	  animate();
+	});
+  
+	// ตั้งตำแหน่งกล้อง
+	camera.position.z = 5;
+  
+	// ฟังก์ชันสำหรับการปรับขนาดเมื่อหน้าต่างเปลี่ยนขนาด
+	window.addEventListener('resize', () => {
+	  const width = window.innerWidth;
+	  const height = window.innerHeight;
+	  renderer.setSize(width, height);
+	  camera.aspect = width / height;
+	  camera.updateProjectionMatrix();
+	});
+  </script>
+  
+
+</head>
+
+<body>
+	<div class="mapwrapper">
+		<div id="viewport2">
+			<div class="map-3"
+				style="background: url(images/floor2map.png) no-repeat; height: 1432px; width: 2134px; font-family: source-code-pro, sans-serif;">
+				<img src="images/Floor2map.png" alt="" />
+
+				<div class="tt-wrapper floor2tag"></div>
+				<div class="tt-wrapper toilet201"></div>
+				
+
+				<!-- Dinosaur Internal -->
+				<div class="tt-wrapper dino201"></div>
+				<div class="tt-wrapper dino202"></div>
+				<!-- End Dinosaur Internal -->
+
+				<!-- Internal Object -->
+				 
+				<div class="tt-wrapper volcano"></div>
+				<div class="tt-wrapper volcano2"></div>
+				<div class="tt-wrapper origin"></div>
+				<div class="tt-wrapper animaltag"></div>
+				<div class="tt-wrapper animaltag2"></div>
+				<div class="tt-wrapper animal"></div>
+				<div class="tt-wrapper stone2"></div>
+				<div class="tt-wrapper stone1"></div>
+				<div class="tt-wrapper earth"></div>
+				<div class="tt-wrapper human-evo"></div>
+				<div class="tt-wrapper dogbear"></div>
+				<div class="tt-wrapper artzone"></div>
+				<div class="tt-wrapper certificate"></div>
+				<!-- End Internal Object -->
+
+				<!-- Human -->
+				<div class="tt-wrapper talk2"></div>
+				<div class="tt-wrapper walk2"></div>
+				<div class="tt-wrapper walk2a"></div>
+				<div class="tt-wrapper drink-water-g2"></div>
+				 <!-- End Human -->
+
+				<!-- Dinosaur Extenal -->
+			<div class="tt-wrapper dino301"></div>
+			<div class="tt-wrapper dino302"></div>
+			<div class="tt-wrapper dino303"></div>
+			<div class="tt-wrapper dino304"></div>
+			<div class="tt-wrapper dino305"></div>
+			<div class="tt-wrapper dino306"></div>
+			<div class="tt-wrapper dino307"></div>
+			<div class="tt-wrapper dinosauria"></div>
+			<!-- End Dinosaur Extenal -->
+
+			<!-- Landscape -->
+			<div class="tt-wrapper garden1"></div>
+			<div class="tt-wrapper garden2"></div>
+			<div class="tt-wrapper garden3"></div>
+			<div class="tt-wrapper garden4"></div>
+			<div class="tt-wrapper garden5"></div>
+			<div class="tt-wrapper garden6"></div>
+			<div class="tt-wrapper garden7"></div>
+			<div class="tt-wrapper garden8"></div>
+			<div class="tt-wrapper garden9"></div>
+			<div class="tt-wrapper garden10"></div>
+			<div class="tt-wrapper billboard-sitemuseum"></div>
+			<!-- End Landscape -->
+
+			<!-- Info -->
+			<div class="tt-wrapper ticket-info">
+				<div class="dyk">
+					<span class="tooltip">
+						<div class="title">
+							<h4>Ticket</h4>
+						</div>
+						<p>
+						อัตราค่าเข้าชม
+						<br>คนไทย
+						<br>เด็ก 20 บาท ผู้ใหญ่ 50 บาท
+						<br>ชาวต่างชาติ
+						<br>เด็ก 75 บาท ผู้ใหญ่ 150 บาท
+					</p>
+					</span>
+				</div>
+			</div>
+
+			<div class="tt-wrapper locker-info">
+				<div class="dyk">
+					<span class="tooltip" style="width: 200px;">
+						<div class="title">
+							<h4>Locker</h4>
+						</div>
+						<p>
+						จุดรับฝากของ
+					</p>
+					</span>
+				</div>
+			</div>
+
+			<div class="tt-wrapper human-evo-info">
+			<div class="dyk">
+				<span class="tooltip" style="width: 300px;">
+					<div class="title">
+						<h4>Human Evo</h4>
+					</div>
+					<p>
+						Test
+				</p>
+				</span>
+			</div>
+		</div>
+			<div class="tt-wrapper dogbear-info">
+				<div class="dyk">
+					<span class="tooltip">
+						<div class="title">
+							<h4>แเม่เมาะซิออน โพธิสัตย์ติ (Maemohcyon Potisati)</h4>
+						</div>
+						<p>
+							หรือที่รู้จักกันในชื่อ <a href="http://prachatai.com/journal/2006/01/22054" style="color: white; text-decoration: underline #5a5afd 2px;">หมาหมี</a> เป็นสัตว์กินเนื้อขนาดกลางที่มีลักษณะผสมผสานระหว่างหมีกับหมา
+					</p>
+					</span>
+				</div>
+			</div>
+
+			<div class="tt-wrapper earth-info">
+				<div class="dyk">
+					<span class="tooltip" style="width: 350px;">
+						<div class="title">
+							<h4>EARTH</h4>
+						</div>
+						<p>
+							....
+					</p>
+					</span>
+				</div>
+			</div>
+
+			<div class="tt-wrapper volcano-info">
+				<div class="dyk">
+					<span class="tooltip" style="width: 350px;">
+						<div class="title">
+							<h4>VOLCANO</h4>
+						</div>
+						<p>
+							จากดาวเคราะห์ร้อนจัดและปั่นป่วนอันเนื่องจากภูเขาไฟระเบิดและการพุ่งชนของอุกกาบาตโลก
+							ของเราค่อยๆเย็นตัวลงทั้งบรรยากาศและน้ำ ช่วยนำทางไปสู่พัฒนาการของสารเคมีอันสลับซับซ้อน
+							ซึ่งเรียกว่าชีวิตสิ่งมีชีวิตยุคแรกเริ่มที่มีรูปร่าง ง่ายๆ และมองไม่เห็นด้วยตาเปล่าได้ปรับเปลี่ยนสภาพ
+							แวดล้อมของโลกด้วยการเติมออกซิเจนสู่มหาสมุทร และบรรยากาศจนกลายเป็นสถานที่ที่เหมาะสม
+							สำหรับวิวัฒนาการของสิ่งมีชีวิตรูปแบบใหม่  
+					</p>
+					</span>
+				</div>
+			</div>
+
+			<div class="tt-wrapper meeting1-info">
+				<div class="dyk">
+					<span class="tooltip" style="width: 250px;">
+						<div class="title">
+							<h4>ห้องประชุมเล็ก</h4>
+						</div>
+						<p>
+							
+					</p>
+					</span>
+				</div>
+			</div>
+			<div class="tt-wrapper meeting2-info">
+				<div class="dyk">
+					<span class="tooltip" style="width: 250px;">
+						<div class="title">
+							<h4>ห้องประชุมใหญ่</h4>
+						</div>
+						<p>
+							
+					</p>
+					</span>
+				</div>
+			</div>
+			<div class="tt-wrapper shop-info">
+				<div class="dyk">
+					<span class="tooltip" style="width: 200px;">
+						<div class="title">
+							<h4>Gift Shop</h4>
+						</div>
+						<p>ร้านขายของที่ระลึก
+					</p>
+					</span>
+				</div>
+			</div>
+			<div class="tt-wrapper artzone-info">
+				<div class="dyk">
+					<span class="tooltip" style="width: 250px;">
+						<div class="title">
+							<h4>Kids Art Zone</h4>
+						</div>
+						<p>
+							มุมสร้างสรรค์ศิลปะสำหรับเด็ก ไม่ว่าจะเป็นการวาดรูป หรือปั้นดินน้ำมัน
+							<br>เปิดเฉพาะวันเสาร์-อาทิตย์
+					</p>
+					</span>
+				</div>
+			</div>
+			<div class="tt-wrapper eventzone-info">
+				<div class="dyk">
+					<span class="tooltip" style="width: 250px;">
+						<div class="title">
+							<h4>Event Zone</h4>
+						</div>
+						<p>
+							มุมนิทรรศการทั่วไป
+					</p>
+					</span>
+				</div>
+			</div>
+			<div class="tt-wrapper dino201-info">
+				<div class="dyk">
+					<span class="tooltip">
+						<div class="title">
+							<h4><a href="https://th.wikipedia.org/wiki/%E0%B8%AA%E0%B8%A2%E0%B8%B2%E0%B8%A1%E0%B9%82%E0%B8%A1%E0%B9%84%E0%B8%97%E0%B8%A3%E0%B8%B1%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B8%AA" 
+								style="color: white; text-decoration: underline #5a5afd 2px;">สยามโมไทรันนัส อิสานเอนซิส (Siamotyrannus isanensis)</a></h4>
+						</div>
+						<p>
+							ไดโนเสาร์เทอโรพอด ลำตัวยาวประมาณ 6.5 เมตร ชื่อของมันหมายถึง"ทรราชแห่งสยามจากภาคอีสาน" 
+							พบกระดูกเป็นครั้งแรกที่หลุมขุดค้นที่ 9 ที่ภูประตูตีหมา อุทยานแห่งชาติภูเวียง อำเภอเวียงเก่า จังหวัดขอนแก่น 
+							เมื่อปี พ.ศ. 2536  
+					</p>
+					</span>
+				</div>
+			</div>
+
+			<div class="tt-wrapper dino202-info">
+				<div class="dyk">
+					<span class="tooltip">
+						<div class="title">
+							<h4>...</h4>
+						</div>
+						<p>
+							...
+					</p>
+					</span>
+				</div>
+			</div>
+
+			<div class="tt-wrapper dino301-info">
+				<div class="dyk">
+					<span class="tooltip" style="width: 350px;">
+						<div class="title">
+							<h4><a href="https://en.wikipedia.org/wiki/Phuwiangosaurus" 
+								style="color: white; text-decoration: underline #5a5afd 2px;">ภูเวียงโกซอรัส สิรินธรเน (Phuwiangosaurus sirindhornae)</a></h4>
+						</div>
+						<p>“ยักษ์คอยาวแห่งเทือกเขาภูเวียง” ที่ใช้เวลาทั้งวันไปกับการแทะเล็มใบไม้ด้วยฟันแบบแท่งดินสอที่ไม่เหมาะสมกับการบดเคี้ยว 
+							จึงต้องกลืนก้อนกรวดลงไปในกระเพาะเพื่อช่วยในการบดอาหาร “หุบเขาไดโนเสาร์ภูเวียง” เป็นเหมือนบ้านหลังใหญ่ของยักษ์คอยาวแห่งเทือกเขาภูเวียง 
+							เพราะมีการค้นพบกระดูกไดโนเสาร์วัยเยาว์จนถึงตัวเต็มวัย ลักษณะ : เป็นไดโนเสาร์กินพืชกลุ่มซอโรพอด คอยาว หางยาว เดินสี่ขา 
+							ขนาด : ความยาวประมาณ 15-20 เมตร อายุ : พบในหมวดหินเสาขัว ยุคครีเทเชียสตอนต้น (130 ล้านปีก่อน)
+						</p>
+					</span>
+				</div>
+			</div>
+			<div class="tt-wrapper dino301-info">
+				<div class="dyk">
+					<span class="tooltip" style="width: 350px;">
+						<div class="title">
+							<h4><a href="https://en.wikipedia.org/wiki/Phuwiangosaurus"
+									style="color: white; text-decoration: underline #5a5afd 2px;">ภูเวียงโกซอรัส สิรินธรเน
+									(Phuwiangosaurus sirindhornae)</a></h4>
+						</div>
+						<p>“ยักษ์คอยาวแห่งเทือกเขาภูเวียง”
+							ที่ใช้เวลาทั้งวันไปกับการแทะเล็มใบไม้ด้วยฟันแบบแท่งดินสอที่ไม่เหมาะสมกับการบดเคี้ยว
+							จึงต้องกลืนก้อนกรวดลงไปในกระเพาะเพื่อช่วยในการบดอาหาร “หุบเขาไดโนเสาร์ภูเวียง”
+							เป็นเหมือนบ้านหลังใหญ่ของยักษ์คอยาวแห่งเทือกเขาภูเวียง
+							เพราะมีการค้นพบกระดูกไดโนเสาร์วัยเยาว์จนถึงตัวเต็มวัย ลักษณะ :
+							เป็นไดโนเสาร์กินพืชกลุ่มซอโรพอด คอยาว หางยาว เดินสี่ขา
+							ขนาด : ความยาวประมาณ 15-20 เมตร อายุ : พบในหมวดหินเสาขัว ยุคครีเทเชียสตอนต้น (130
+							ล้านปีก่อน)
+						</p>
+					</span>
+				</div>
+			</div>
+
+			<div class="tt-wrapper dino302-info">
+				<div class="dyk">
+					<span class="tooltip" style="width: 350px;">
+						<div class="title">
+							<h4><a href="https://en.wikipedia.org/wiki/Siamosaurus"
+								style="color: white; text-decoration: underline #5a5afd 2px;">สยามโมซอรัส สุธีธรนิ
+									(Siammosaurus suteethorni)</a></h4>
+						</div>
+						<p>ลักษณะ : เป็นไดโนเสาร์กินเนื้อกลุ่มเทอโรพอด เดิน 2 ขา มีกะโหลกและฟันรูปกรวย
+							คล้ายฟันจระเข้ กินปลาเป็นอาหาร
+							ขนาด : ความยาวประมาณ 6 เมตร อายุ : พบในหมวดหินเสาขัว ยุคครีเทเชียสตอนต้น (130
+							ล้านปีก่อน)
+							สถานที่พบ : อุทยานแห่งชาติภูเวียง จ.ขอนแก่น
+							ที่มาของชื่อ : ชื่อสกุลมาจากชื่อเรียกราชอาณาจักรไทยในอดีต “สยาม”
+							และชื่อชนิดตั้งเพื่อเป็นเกียรติแก่ นายวราวุธ สุธีธร
+							นักธรณีวิทยาผู้ร่วมบุกเบิกการศึกษาบรรพชีวินวิทยาด้านไดโนเสาร์ของไทย
+						</p>
+					</span>
+				</div>
+			</div>
+			<div class="tt-wrapper dino303-info">
+				<div class="dyk">
+					<span class="tooltip" style="width: 350px;">
+						<div class="title">
+							<h4><a href="https://en.wikipedia.org/wiki/Isanosaurus"
+								style="color: white; text-decoration: underline #5a5afd 2px;">อีสานโนซอรัส
+									อรรถวิภัชน์ชิ<br>(Isanosaurus attavipatchi)</a></h4>
+						</div>
+						<p>ไดโนเสาร์คอยาว หางยาว ขนาด 12-16 เมตร
+							ที่มีลักษณะโบราณที่สุดเท่าที่พบมาใยเอเชียตะวันออกเฉียงใต้ จากลักษณะของการะดูกขาหลัง
+							ท่อนบนและกระดูกสันหลังจัดให้เป็นซอโรพอด ซึ่สามารถแยกออกจากโปรซอโรพอดได้อย่างชัดเจน
+							การค้นพบ อีสานโนซอรัส อรรถวิภัชน์ชิ
+							แสดงให้เห็นว่า แผ่นดินไทยเชื่อมกับแผ่นทวีปเอเชียก่อนยุคไทรแอสซิก
+							และในช่วงไทรแอสซิกตอนปลายได้มีไดโนเสาร์ซอโรพอดปรากฏขึ้นมาแล้ว
+						</p>
+					</span>
+				</div>
+			</div>
+
+			<div class="tt-wrapper dino304-info">
+				<div class="dyk">
+					<span class="tooltip" style="width: 350px;">
+						<div class="title">
+							<h4><a href="https://en.wikipedia.org/wiki/Isanosaurus"
+								style="color: white; text-decoration: underline #5a5afd 2px;">อีสานโนซอรัส
+									อรรถวิภัชน์ชิ<br>(Isanosaurus attavipatchi)</a></h4>
+						</div>
+						<p>ไดโนเสาร์คอยาว หางยาว ขนาด 12-16 เมตร
+							ที่มีลักษณะโบราณที่สุดเท่าที่พบมาใยเอเชียตะวันออกเฉียงใต้ จากลักษณะของการะดูกขาหลัง
+							ท่อนบนและกระดูกสันหลังจัดให้เป็นซอโรพอด ซึ่สามารถแยกออกจากโปรซอโรพอดได้อย่างชัดเจน
+							การค้นพบ อีสานโนซอรัส อรรถวิภัชน์ชิ
+							แสดงให้เห็นว่า แผ่นดินไทยเชื่อมกับแผ่นทวีปเอเชียก่อนยุคไทรแอสซิก
+							และในช่วงไทรแอสซิกตอนปลายได้มีไดโนเสาร์ซอโรพอดปรากฏขึ้นมาแล้ว
+						</p>
+					</span>
+				</div>
+			</div>
+			<div class="tt-wrapper dino305-info">
+				<div class="dyk">
+					<span class="tooltip" style="width: 350px;">
+						<div class="title">
+							<h4><a href="https://en.wikipedia.org/wiki/Isanosaurus"
+								style="color: white; text-decoration: underline #5a5afd 2px;">อีสานโนซอรัส
+									อรรถวิภัชน์ชิ<br>(Isanosaurus attavipatchi)</a></h4>
+						</div>
+						<p>ไดโนเสาร์คอยาว หางยาว ขนาด 12-16 เมตร
+							ที่มีลักษณะโบราณที่สุดเท่าที่พบมาใยเอเชียตะวันออกเฉียงใต้ จากลักษณะของการะดูกขาหลัง
+							ท่อนบนและกระดูกสันหลังจัดให้เป็นซอโรพอด ซึ่สามารถแยกออกจากโปรซอโรพอดได้อย่างชัดเจน
+							การค้นพบ อีสานโนซอรัส อรรถวิภัชน์ชิ
+							แสดงให้เห็นว่า แผ่นดินไทยเชื่อมกับแผ่นทวีปเอเชียก่อนยุคไทรแอสซิก
+							และในช่วงไทรแอสซิกตอนปลายได้มีไดโนเสาร์ซอโรพอดปรากฏขึ้นมาแล้ว
+						</p>
+					</span>
+				</div>
+			</div>
+			<a href="index.html"><div class="tt-wrapper godown"></div></a>
+				<a href="index.html"><div class="tt-wrapper godown2"></div></a>
+			<!-- End Info -->
+
+			<!-- 360 View -->
+			<a href="cam201.html"><div class="tt-wrapper cam201"></div></a>
+			
+			<!-- End 360 View -->
+
+			</div>
+			<div class="map-2" style="height: 2148px; width: 3201px;">
+				<img src="images/Floor2map.png" alt="" />
+				<div class="mapcontent">
+
+				</div>
+			</div>
+			<div class="map-1" style="height: 2864px; width: 4268px;">
+				<img src="images/Floor2map.png" alt="" />
+				<div class="mapcontent">
+
+				</div>
+			</div>
+		</div>
+
+		<div class="floor1press">
+			<a href="index.html">Floor 1</a>
+		</div>
+
+		<div class="map-control">
+			<a href="#zoom" class="zoom" style="color:white; font-family: Noto Sans Thai; font-size: 24pt; text-decoration: none;">+</a>
+			<a href="#zoom_out" class="back" style="color:white; font-family: Noto Sans Thai; font-size: 24pt; text-decoration: none;">-</a>
+		</div>
+
+	</div>
+
+
+</body>
+
+</html>

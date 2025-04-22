@@ -1,0 +1,2821 @@
+@font-face {
+    font-family: 'bangna-new';
+    src: url('bangna-new-webfont.woff2') format('woff2'),
+         url('bangna-new-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+  h1,
+  h2 {
+    font-family: 'Noto Sans Thai', sans-serif;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+  }
+  h3,
+  h4,
+  h5 {
+    font-family: 'Noto Sans Thai', serif;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+  }
+  h1 {
+    font-size: 2em;
+    line-height: 2.1em;
+    margin: 1em 0 0;
+  }
+  h2 {
+    font-size: 1.8em;
+    line-height: 1.15em;
+    margin: 0.8em 0;
+    padding-top: 40px;
+    margin-top: 0;
+  }
+  h3 {
+    font-size: 1.6em;
+    line-height: 1.3em;
+    margin: 1em 0 1.4em;
+  }
+  h4 {
+    font-size: 1.2em;
+    line-height: 1.15em;
+  }
+  a,
+  body,
+  p {
+    font-family: 'Noto Sans Thai';
+    font-size: 1.05em;
+    line-height: 1.6em;
+    font-weight: 400;
+    color: #fff;
+  }
+  .read-time {
+    font-size: 0.8em;
+    margin-bottom: 0;
+  }
+  .quote-wrapper {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 40px;
+    margin: 1em 40px;
+    word-wrap: normal;
+    float: none;
+    position: relative;
+  }
+  .quote-wrapper blockquote {
+    margin: 0;
+    padding: 0;
+  }
+  .quote-wrapper blockquote i {
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    font-size: 40px;
+  }
+  cite {
+    display: block;
+  }
+  body,
+  div,
+  dl,
+  dt,
+  dd,
+  ul,
+  ol,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  pre,
+  form,
+  fieldset,
+  input,
+  textarea,
+  p,
+  blockquote,
+  th,
+  td {
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-overflow-scrolling: auto;
+    overflow: hidden;
+  }
+  @media (max-width: 768px) {
+    body {
+      margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-overflow-scrolling: auto;
+    overflow: hidden;
+    }
+  }
+  #viewport,
+  #viewport2 {
+    cursor: move;
+    cursor: all-scroll;
+  }
+  #viewport:active,
+  #viewport2:active {
+    cursor: move;
+    cursor: all-scroll;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  fieldset,
+  img {
+    border: 0;
+  }
+  address,
+  caption,
+  cite,
+  code,
+  dfn,
+  th,
+  var {
+    font-style: normal;
+    font-weight: normal;
+  }
+  ol,
+  ul {
+    list-style: none;
+  }
+  caption,
+  th {
+    text-align: left;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 100%;
+    font-weight: normal;
+  }
+  a {
+    font-weight: 400;
+  }
+  q:before,
+  q:after {
+    content: '';
+  }
+  abbr,
+  acronym {
+    border: 0;
+  }
+  section,
+  header {
+    display: block;
+  }
+  ::selection {
+    background: transparent !important;
+    text-shadow: none;
+  }
+  .loading-wrapper {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999999;
+    opacity: 1;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    background: #fff;
+    -webkit-animation: fadeOut 0.5s forwards;
+    -moz-animation: fadeOut 0.5s forwards;
+    -o-animation: fadeOut 0.5s forwards;
+    -ms-animation: fadeOut 0.5s forwards;
+    animation: fadeOut 0.5s forwards;
+    -webkit-animation-delay: 4.2s;
+    -moz-animation-delay: 4.2s;
+    -o-animation-delay: 4.2s;
+    -ms-animation-delay: 4.2s;
+    animation-delay: 4.2s;
+  }
+  .loading {
+    display: block;
+    width: 350px;
+    height: 7px;
+    background: #f2f2f2;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -o-border-radius: 7px;
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    overflow: hidden;
+  }
+  .loading .inside {
+    display: block;
+    width: 350px;
+    height: 7px;
+    background: #4bb445;
+    background: -moz-linear-gradient(left, #4bb445 0%, #f0db0d 100);
+    background: -webkit-linear-gradient(left, #4bb445 0%, #f0db0d 100%);
+    background: linear-gradient(to right, #4bb445 0%, #f0db0d 100%);
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -o-border-radius: 7px;
+    -webkit-animation: load 4s forwards ease;
+    -moz-animation: load 4s forwards ease;
+    -o-animation: load 4s forwards ease;
+    -ms-animation: load 4s forwards ease;
+    animation: load 4s forwards ease;
+  }
+  .loading-text {
+    display: block;
+    width: 400px;
+    text-align: center;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -o-border-radius: 15px;
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    margin-top: 20px;
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-weight: 400;
+    color: #ccc !important;
+    letter-spacing: 0.04em;
+    font-size: 1.2em;
+  }
+  .loading-text h2 {
+    color: #ccc;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .olym-rings {
+    width: 200px;
+    height: auto;
+    display: block;
+    position: fixed;
+    top: 200px;
+    left: 50%;
+    margin-left: -120px;
+  }
+  .crane {
+    display: block;
+    width: 87px;
+    height: auto;
+    position: fixed;
+    top: -569px;
+    left: 50%;
+    -webkit-transform: translate(152px, 0);
+    -moz-transform: translate(152px, 0);
+    -o-transform: translate(152px, 0);
+    -ms-transform: translate(152px, 0);
+    transform: translate(152px, 0);
+    margin-left: -120px;
+    -webkit-animation: craneMove 4s forwards;
+    -moz-animation: craneMove 4s forwards;
+    -o-animation: craneMove 4s forwards;
+    -ms-animation: craneMove 4s forwards;
+    animation: craneMove 4s forwards;
+  }
+  .olym-ring-red {
+    display: block;
+    position: fixed;
+    top: 200px;
+    left: 50%;
+    margin-left: 33px;
+    width: 82px;
+    -webkit-animation: ringMove 4s forwards;
+    -moz-animation: ringMove 4s forwards;
+    -o-animation: ringMove 4s forwards;
+    -ms-animation: ringMove 4s forwards;
+    animation: ringMove 4s forwards;
+  }
+  @media (min-height: 600px) {
+    .loading {
+      top: 450px;
+    }
+    .loading-text {
+      top: 460px;
+    }
+  }
+  @media (min-height: 800px) {
+    .loading {
+      top: 555px;
+    }
+    .loading-text {
+      top: 555px;
+    }
+    .olym-rings,
+    .olym-ring-red {
+      top: 350px;
+    }
+    .olym-ring-red {
+      -webkit-animation: ringMoveLow 4s forwards;
+      -moz-animation: ringMoveLow 4s forwards;
+      -o-animation: ringMoveLow 4s forwards;
+      -ms-animation: ringMoveLow 4s forwards;
+      animation: ringMoveLow 4s forwards;
+    }
+    .crane {
+      top: -419px;
+      -webkit-animation: craneMoveLow 4s forwards;
+      -moz-animation: craneMoveLow 4s forwards;
+      -o-animation: craneMoveLow 4s forwards;
+      -ms-animation: craneMoveLow 4s forwards;
+      animation: craneMoveLow 4s forwards;
+    }
+  }
+  .mapwrapper {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  @media (min-width: 500px) {
+    .mapwrapper {
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+  #viewport,
+  #viewport2 {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    position: relative;
+    transform: scale(1);
+  }
+
+  @media (min-width: 768px) {
+    #viewport2 {
+      width: 100%;
+      height: 100%;
+      overflow: scroll;
+  }
+}
+
+  .mapview {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll;
+  }
+  @keyframes scroll-watcher {
+    to {scale: 1 1;}
+  }
+
+  @media (min-width: 768px) {
+    .mapview {
+      width: 50%;
+      height: 50%;
+      overflow: scroll;
+    }
+  }
+  
+
+  .map-control {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    height: 75px;
+    width: 35px;
+    z-index: 97;
+  }
+  .map-control a {
+    height: 18px;
+    width: 18px;
+    display: block;
+    position: absolute;
+    outline: none;
+    text-decoration: none;
+  }
+  .map-control a:hover {
+    background: #d856ff;
+    transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+  }
+  .map-control a.zoom {
+    right: 0px;
+    bottom: 40px;
+    height: 35px;
+    width: 35px;
+    background: #d856ff;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    font-size: 0.7em;
+    padding: 0;
+    transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+  }
+  .map-control a.zoom:hover {
+    background: #d856ff;
+    transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+  }
+  .map-control a.back {
+    right: 0px;
+    bottom: 0;
+    height: 35px;
+    width: 35px;
+    background: #d856ff;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    font-size: 0.7em;
+    padding: 0;
+    transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+  }
+  .map-control a.back:hover {
+    background: #d856ff;
+    transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+  }
+  .map-control #box-info {
+    width: 190px;
+    height: auto;
+    visibility: hidden;
+    bottom: 80px;
+    background-color: #fff;
+    -webkit-transition: all 0.3s 0.2s ease-in-out;
+    -moz-transition: all 0.3s 0.2s ease-in-out;
+    -o-transition: all 0.3s 0.2s ease-in-out;
+    -ms-transition: all 0.3s 0.2s ease-in-out;
+    transition: all;
+    -moz-transition: all;
+    -webkit-transition: all;
+    -o-transition: all;
+    position: absolute;
+    left: -200px;
+    padding: 12px;
+    opacity: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  }
+  .map-control #box-info:target {
+    visibility: visible;
+    opacity: 1;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    bottom: 40px;
+  }
+  
+  .floor1press {
+    right: 20px;
+    top: 10px;
+    height: 35px;
+    width: 100px;
+    background: #d856ff;
+    line-height: 35px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.7em;
+    position: absolute;
+    cursor: pointer;
+    z-index: 97;
+    transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+  }
+  
+  .floor1press a {
+    color:white; 
+    font-family: 'Noto Sans Thai'; 
+    font-size: 16pt;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .floor2press {
+    right: 20px;
+    top: 10px;
+    height: 35px;
+    width: 100px;
+    position: absolute;
+    background: #d856ff;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    font-size: 0.7em;
+    z-index: 97;
+    transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+  }
+  .floor2press:hover {
+    background: #d900ec;
+    transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+  }
+  .floor2press a {
+    color:white; 
+    font-family: 'Noto Sans Thai'; 
+    font-size: 16pt;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .view {
+    right: 110px;
+    bottom: 30px;
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    background: #ff565e;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    font-size: 0.7em;
+    cursor: pointer;
+    z-index: 97;
+    transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+  }
+  .view:hover {
+    background: #dd3a4a;
+    transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+  }
+  
+  .info span {
+    width: 210px;
+    height: auto;
+    visibility: hidden;
+    bottom: 80px;
+    background-color: #ff565e;
+    font-family: 'Noto Sans Thai';
+    transition: all 0.3s ease-in-out 0.2s;
+    -moz-transition: all 0.3s ease-in-out 0.2s;
+    -webkit-transition: all 0.3s ease-in-out 0.2s;
+    -o-transition: all 0.3s ease-in-out 0.2s;
+    position: absolute;
+    left: -200px;
+    padding: 12px;
+    opacity: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -o-border-radius: 2px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #fff;
+  }
+  .info span a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+  }
+  .info span a:after {
+    width: 100%;
+    height: 1px;
+    background: #ffcb39;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: inline-block;
+    content: "";
+  }
+  .info span:after {
+    display: inline-block;
+    content: "";
+    bottom: -5px;
+    margin-left: -20px;
+    border-top: 8px solid #ff565e;
+  }
+  .info:hover {
+    background: #dd3a4a;
+    transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+  }
+  .info:hover span {
+    visibility: visible;
+    opacity: 1;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    bottom: 40px;
+  }
+  .info span:before,
+  .info span:after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    right: 7px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+  }
+  .tt-wrapper {
+    list-style: none;
+    position: absolute;
+  }
+  .tt-wrapper div {
+    display: block;
+    outline: none;
+    background-color: none;
+    text-indent: -9000px;
+    position: relative;
+    opacity: 1;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    width: 100%;
+    height: 100%;
+    text-decoration: none !important;
+  }
+  .tt-wrapper div span.tooltip {
+    width: 300px;
+    height: auto;
+    line-height: 18px;
+    padding: 0;
+    left: 50%;
+    margin-left: -150px;
+    text-decoration: none;
+    text-indent: 0px;
+    position: absolute;
+    cursor: auto;
+    bottom: 110%;
+    opacity: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    visibility: hidden;
+    transition: all 0.3s 0.2s ease-in-out;
+    -moz-transition: all 0.3s 0.2s ease-in-out;
+    -webkit-transition: all 0.3s 0.2s ease-in-out;
+    -o-transition: all 0.3s 0.2s ease-in-out;
+    background: #e3b9ff;
+    -webkit-box-shadow: 0px 29px 88px -30px rgba(0,0,0,0.9);
+    -moz-box-shadow: 0px 29px 88px -30px rgba(0,0,0,0.9);
+    box-shadow: 0px 29px 88px -30px rgba(0,0,0,0.9);
+    z-index: 98;
+  }
+  .tt-wrapper div span.tooltip p {
+    text-decoration: none;
+    font-family: 'Noto Sans Thai';
+    color: #005c75;
+    padding: 12px 20px 25px;
+    line-height: 1.45em;
+    font-size: 0.9em;
+  }
+  .tt-wrapper div span.tooltip p a,
+  .tt-wrapper div span.tooltip p a:link {
+    color: #005c75;
+    text-decoration: none;
+    transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+  }
+  .tt-wrapper div span.tooltip p a span,
+  .tt-wrapper div span.tooltip p a:link span {
+    position: relative;
+  }
+  .tt-wrapper div span.tooltip p a span:after,
+  .tt-wrapper div span.tooltip p a:link span:after {
+    width: 100%;
+    height: 1px;
+    background: #ff565e;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: inline-block;
+    content: "";
+  }
+  .tt-wrapper div span.tooltip p a:hover,
+  .tt-wrapper div span.tooltip p a:link:hover {
+    color: #ff565e;
+    transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+  }
+  .tt-wrapper div span.tooltip p.tooltip-info {
+    font-size: 0.8em;
+    margin-bottom: 0;
+    padding: 0 20px;
+    line-height: 1.6em;
+  }
+  .tt-wrapper div span.tooltip p.tooltip-info:first-of-type {
+    padding-top: 15px;
+  }
+  .tt-wrapper div span.tooltip p.tooltip-info a,
+  .tt-wrapper div span.tooltip p.tooltip-info a:link {
+    text-decoration: none;
+    color: #005c75;
+  }
+  .tt-wrapper div span.tooltip .uppercase {
+    text-transform: uppercase;
+    color: #005c75;
+    font-weight: 600;
+  }
+  .tt-wrapper div span.tooltip .title {
+    background-color: #e3b9ff;
+    background: #c368ff;
+    text-indent: 0;
+    padding: 11px 20px;
+    width: auto;
+  }
+  .tt-wrapper div span.tooltip .title h3 {
+    font-family: 'Noto Sans Thai';
+    color: #fff;
+    line-height: 0.85em;
+    font-size: 1.6em;
+    letter-spacing: 0.01em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .tt-wrapper div span.tooltip .title a {
+    font-family: 'Noto Sans Thai';
+    color: #ffffff;
+    line-height: 0.85em;
+    font-size: 1em;
+    text-decoration: underline #5a5afd 5px;
+    letter-spacing: 0.01em;
+  }
+
+  .tt-wrapper div span.tooltip:after {
+    bottom: -16px;
+    margin-left: -20px;
+    border-top: 20px solid #e3b9ff;
+  }
+  .tt-wrapper div.bottom span.tooltip {
+    top: 130%;
+    bottom: auto;
+    opacity: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  }
+  .tt-wrapper div.bottom span.tooltip:after {
+    top: -16px;
+    margin-left: -20px;
+    border-bottom: 20px solid #f8b133;
+    border-top: none;
+  }
+  .tt-wrapper div.bottom:hover span.tooltip {
+    opacity: 1;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    bottom: auto;
+    top: 140%;
+  }
+  .tt-wrapper div:hover {
+    cursor: pointer;
+  }
+  .tt-wrapper div:hover span.tooltip {
+    opacity: 1;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    bottom: 120%;
+    visibility: visible;
+  }
+  .tt-wrapper div span.tooltip:before,
+  .tt-wrapper div span.tooltip:after {
+    content: '';
+    position: absolute;
+    bottom: -16px;
+    left: 50%;
+    margin-left: -20px;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+  }
+  .tt-wrapper div.bottom span.tooltip:before,
+  .tt-wrapper div.bottom span.tooltip:after {
+    content: '';
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    margin-left: -20px;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+  }
+  .tt-wrapper {
+    list-style: none;
+    position: absolute;
+  }
+  .tt-wrapper div.twitter {
+    display: block;
+    outline: none;
+    background-color: none;
+    text-indent: -9000px;
+    position: relative;
+    opacity: 1;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    width: 100%;
+    height: 100%;
+    text-decoration: none !important;
+  }
+  .tt-wrapper div.twitter span.tooltip {
+    width: 250px;
+    height: auto;
+    line-height: 18px;
+    padding: 0;
+    left: 50%;
+    margin-left: -125px;
+    text-decoration: none;
+    text-indent: 0px;
+    position: absolute;
+    cursor: pointer;
+    bottom: 110%;
+    opacity: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    visibility: hidden;
+    transition: all 0.3s 0.2s ease-in-out;
+    -moz-transition: all 0.3s 0.2s ease-in-out;
+    -webkit-transition: all 0.3s 0.2s ease-in-out;
+    -o-transition: all 0.3s 0.2s ease-in-out;
+    background-color: #1fade5;
+    background-image: url("images/arrow.png");
+    background-position: 94% center;
+    background-repeat: no-repeat;
+    -webkit-background-size: 15px auto;
+    background-size: 15px auto;
+    -webkit-box-shadow: 0px 29px 88px -30px rgba(0,0,0,0.9);
+    -moz-box-shadow: 0px 29px 88px -30px rgba(0,0,0,0.9);
+    box-shadow: 0px 29px 88px -30px rgba(0,0,0,0.9);
+    z-index: 98;
+  }
+  .tt-wrapper div.twitter span.tooltip:hover {
+    background-color: #0d95bf;
+    transition: all 0.3s 0.2s ease-in-out;
+    -moz-transition: all 0.3s 0.2s ease-in-out;
+    -webkit-transition: all 0.3s 0.2s ease-in-out;
+    -o-transition: all 0.3s 0.2s ease-in-out;
+  }
+  .tt-wrapper div.twitter span.tooltip:hover:after {
+    border-top: 14px solid #0d95bf;
+    transition: all 0.3s 0.2s ease-in-out;
+    -moz-transition: all 0.3s 0.2s ease-in-out;
+    -webkit-transition: all 0.3s 0.2s ease-in-out;
+    -o-transition: all 0.3s 0.2s ease-in-out;
+  }
+  .tt-wrapper div.twitter span.tooltip p.tooltip-info {
+    text-decoration: none;
+    font-family: 'Noto Sans Thai';
+    color: #fff;
+    font-weight: 400;
+    padding: 10px 40px 10px 10px;
+    font-size: 0.8em;
+    line-height: 1.3em;
+  }
+  .tt-wrapper div.twitter span.tooltip p.tooltip-info .hashtag {
+    text-decoration: none;
+    font-family: 'Noto Sans Thai';
+    color: #fff;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: inherit;
+    color: #ffec00;
+  }
+  .tt-wrapper div.twitter span.tooltip p.tooltip-info .profile-img {
+    display: inline-block;
+    float: left;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .tt-wrapper div.twitter span.tooltip p.tooltip-info .at-symbol {
+    display: inline-block;
+    color: #ffec00;
+    font-weight: bold;
+    font-size: 1.1em;
+    line-height: 30px;
+    vertical-align: super;
+    margin-bottom: 10px;
+  }
+  .tt-wrapper div.twitter span.tooltip p.tooltip-info .username {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.1em;
+    line-height: 30px;
+    vertical-align: middle;
+    margin-bottom: 10px;
+  }
+  .tt-wrapper div.twitter:hover {
+    cursor: pointer;
+  }
+  .tt-wrapper div.twitter:hover span.tooltip {
+    opacity: 1;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    bottom: 120%;
+    visibility: visible;
+  }
+  .tt-wrapper div.twitter:after {
+    border-top: 14px solid #1fade5;
+  }
+  .tt-wrapper div.twitter span.tooltip:before,
+  .tt-wrapper div.twitter span.tooltip:after {
+    content: '';
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    margin-left: -14px;
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 14px solid #1fade5;
+    transition: all 0.3s 0.2s ease-in-out;
+    -moz-transition: all 0.3s 0.2s ease-in-out;
+    -webkit-transition: all 0.3s 0.2s ease-in-out;
+    -o-transition: all 0.3s 0.2s ease-in-out;
+  }
+  .part-tooltip {
+    width: 140px;
+    height: auto;
+    line-height: 18px;
+    padding: 12px;
+    left: 50%;
+    margin-left: -82px;
+    text-decoration: none;
+    text-indent: 0px;
+    position: absolute;
+    cursor: auto;
+    bottom: 230%;
+    opacity: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    visibility: hidden;
+    transition: all 0.3s 0.2s ease-in-out;
+    -moz-transition: all 0.3s 0.2s ease-in-out;
+    -webkit-transition: all 0.3s 0.2s ease-in-out;
+    -o-transition: all 0.3s 0.2s ease-in-out;
+    background: #ff565e;
+    -webkit-box-shadow: 0px 10px 88px -30px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0px 10px 88px -30px rgba(0,0,0,0.7);
+    box-shadow: 0px 10px 88px -30px rgba(0,0,0,0.7);
+    z-index: 98;
+  }
+  .part-tooltip.show {
+    opacity: 1;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    visibility: visible;
+    bottom: 180%;
+    transition: all 0.3s 0.2s ease-in-out;
+    -moz-transition: all 0.3s 0.2s ease-in-out;
+    -webkit-transition: all 0.3s 0.2s ease-in-out;
+    -o-transition: all 0.3s 0.2s ease-in-out;
+  }
+  .part-tooltip h3,
+  .part-tooltip p {
+    color: #fff;
+  }
+  .part-tooltip p {
+    font-weight: 400;
+  }
+  .part-tooltip p:after {
+    content: "";
+    display: table;
+    width: 100%;
+    min-height: 1px;
+    clear: both;
+  }
+  .part-tooltip h3 {
+    font-family: 'Noto Sans Thai';
+    color: #fff;
+    line-height: 1em;
+    font-size: 1.6em;
+    letter-spacing: 0.01em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-bottom: 0.3em;
+  }
+  .part-tooltip:after {
+    content: '';
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    margin-left: -14px;
+    width: 0;
+    height: 0;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 14px solid #ff565e;
+  }
+  .part-tooltip .part {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    float: none;
+    margin: 10% auto 3%;
+    background-color: #fff;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: relative;
+    left: auto !important;
+    top: auto !important;
+  }
+  .part-tooltip .part.foot-1 {
+    background-image: url("images/foot-left.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: 45% auto;
+    background-size: 45% auto;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  .part-tooltip .part.foot-2 {
+    background-image: url("images/foot-right.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: 45% auto;
+    background-size: 45% auto;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  .part-tooltip .part.hand-1 {
+    background-image: url("images/hand-left.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: 60% auto;
+    background-size: 60% auto;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  .part-tooltip .part.hand-2 {
+    background-image: url("images/hand-right.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: 60% auto;
+    background-size: 60% auto;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  .part-tooltip .part.head {
+    background-image: url("images/head.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: 45% auto;
+    background-size: 45% auto;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  .part-tooltip .part .check {
+    display: inline-block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    background: #ffcb39;
+    color: #fff;
+    top: -4px;
+    right: -1px;
+    font-size: 6px;
+    line-height: 20px;
+    text-align: center;
+  }
+  .cta {
+    color: #005c75;
+    background-color: #fff;
+    border-radius: 18px;
+    -moz-border-radius: 18px;
+    -webkit-border-radius: 18px;
+    -o-border-radius: 18px;
+    font-weight: 600;
+    padding: 6px 13px;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Noto Sans Thai';
+    position: relative;
+    transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+  }
+  .cta:hover,
+  .cta:active {
+    background-color: #ff565e;
+    transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    color: #fff;
+  }
+  .cta:visited {
+    color: #005c75;
+    background-color: #fff;
+    transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+  }
+  .cta:visited:hover {
+    background-color: #ff565e;
+    transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    color: #fff;
+  }
+  .sub-head {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  body.hide-tooltips .map-2 img {
+    display: none;
+  }
+  body.hide-tooltips .map-1 img {
+    display: none;
+  }
+  body.hide-tooltips .tt-wrapper {
+    display: none !important;
+  }
+  body.hide-tooltips .tt-wrapper.prisoner {
+    display: block !important;
+  }
+  body.hide-tooltips .tt-wrapper.prisoner-img {
+    display: block !important;
+  }
+  body.hide-tooltips .tt-wrapper.plane {
+    display: block !important;
+    background-image: url("images/plane-nightmode.svg");
+  }
+  body.hide-tooltips .tt-wrapper.plane .plane-light {
+    display: block;
+    width: 3px;
+    height: 3px;
+    -webkit-animation: lightBlink 2s infinite linear;
+    -moz-animation: lightBlink 2s infinite linear;
+    -o-animation: lightBlink 2s infinite linear;
+    -ms-animation: lightBlink 2s infinite linear;
+    animation: lightBlink 2s infinite linear;
+    background: #e05f07;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    top: 5%;
+    left: 1.2%;
+    z-index: 1;
+  }
+  body.hide-tooltips .tt-wrapper.plane .plane-light-two {
+    display: block;
+    width: 3px;
+    height: 3px;
+    -webkit-animation: lightBlink 2s infinite linear;
+    -moz-animation: lightBlink 2s infinite linear;
+    -o-animation: lightBlink 2s infinite linear;
+    -ms-animation: lightBlink 2s infinite linear;
+    animation: lightBlink 2s infinite linear;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    -ms-animation-delay: 1s;
+    animation-delay: 1s;
+    background: #5bbd0d;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    top: 70.1%;
+    left: 35.4%;
+    z-index: 1;
+  }
+  body.hide-tooltips .tt-wrapper.waterfall {
+    display: block !important;
+    background-image: url("images/waterfall-nightmode.gif");
+  }
+  body.hide-tooltips .tt-wrapper.construction-light {
+    display: block !important;
+    width: 3px;
+    height: 3px;
+    -webkit-animation: lightBlink 2s infinite linear;
+    -moz-animation: lightBlink 2s infinite linear;
+    -o-animation: lightBlink 2s infinite linear;
+    -ms-animation: lightBlink 2s infinite linear;
+    animation: lightBlink 2s infinite linear;
+    background: #e05f07;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    left: 4.651%;
+    top: 68.1%;
+    z-index: 1;
+  }
+  body.hide-tooltips .tt-wrapper.street-light {
+    display: block !important;
+    width: 1.13%;
+    height: 2.6%;
+    background-image: url("images/light-cone.png");
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    -webkit-animation: flicker 20s infinite;
+    -moz-animation: flicker 20s infinite;
+    -o-animation: flicker 20s infinite;
+    -ms-animation: flicker 20s infinite;
+    animation: flicker 20s infinite;
+  }
+  body.hide-tooltips .tt-wrapper.street-light.light-1 {
+    top: 34.03%;
+    left: 14.09%;
+  }
+  body.hide-tooltips .tt-wrapper.street-light.light-2 {
+    top: 53.09%;
+    left: 25.19%;
+    -webkit-animation-delay: 3.6s;
+    -moz-animation-delay: 3.6s;
+    -o-animation-delay: 3.6s;
+    -ms-animation-delay: 3.6s;
+    animation-delay: 3.6s;
+  }
+  body.hide-tooltips .tt-wrapper.street-light.light-3 {
+    top: 74.65%;
+    left: 38.5%;
+    -webkit-animation-delay: 5.25s;
+    -moz-animation-delay: 5.25s;
+    -o-animation-delay: 5.25s;
+    -ms-animation-delay: 5.25s;
+    animation-delay: 5.25s;
+  }
+  body.hide-tooltips .tt-wrapper.street-light.light-4 {
+    top: 74.65%;
+    left: 49.96%;
+    -webkit-animation-delay: 1.2s;
+    -moz-animation-delay: 1.2s;
+    -o-animation-delay: 1.2s;
+    -ms-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+  }
+  body.hide-tooltips .tt-wrapper.street-light.light-5 {
+    top: 32.52%;
+    left: 56.62%;
+    -webkit-animation-delay: 0.47s;
+    -moz-animation-delay: 0.47s;
+    -o-animation-delay: 0.47s;
+    -ms-animation-delay: 0.47s;
+    animation-delay: 0.47s;
+  }
+  body.hide-tooltips .tt-wrapper.street-light.light-6 {
+    top: 9.04%;
+    left: 49.26%;
+    -webkit-animation-delay: 6.3s;
+    -moz-animation-delay: 6.3s;
+    -o-animation-delay: 6.3s;
+    -ms-animation-delay: 6.3s;
+    animation-delay: 6.3s;
+  }
+  body.hide-tooltips .tt-wrapper.stad-light {
+    display: block !important;
+    width: 1.6%;
+    height: 3.8%;
+    background-image: url("images/light-cone-2.png");
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    -webkit-animation: stadLights 10s infinite;
+    -moz-animation: stadLights 10s infinite;
+    -o-animation: stadLights 10s infinite;
+    -ms-animation: stadLights 10s infinite;
+    animation: stadLights 10s infinite;
+    -webkit-transform: rotate(0deg) translateX(0%) translateY(0%);
+    -moz-transform: rotate(0deg) translateX(0%) translateY(0%);
+    -o-transform: rotate(0deg) translateX(0%) translateY(0%);
+    -ms-transform: rotate(0deg) translateX(0%) translateY(0%);
+    transform: rotate(0deg) translateX(0%) translateY(0%);
+  }
+  body.hide-tooltips .tt-wrapper.stad-light.light-7 {
+    top: 45.53%;
+    left: 74.98%;
+  }
+  body.hide-tooltips .tt-wrapper.stad-light.light-8 {
+    top: 45.53%;
+    left: 73.85%;
+    -webkit-animation: stadLightsTwo 10s infinite;
+    -moz-animation: stadLightsTwo 10s infinite;
+    -o-animation: stadLightsTwo 10s infinite;
+    -ms-animation: stadLightsTwo 10s infinite;
+    animation: stadLightsTwo 10s infinite;
+  }
+  body.hide-tooltips .tt-wrapper.stad-light.light-9 {
+    top: 59.8%;
+    left: 25.4%;
+    -webkit-animation: stadLightsTwo 10s infinite;
+    -moz-animation: stadLightsTwo 10s infinite;
+    -o-animation: stadLightsTwo 10s infinite;
+    -ms-animation: stadLightsTwo 10s infinite;
+    animation: stadLightsTwo 10s infinite;
+  }
+  body.hide-tooltips .tt-wrapper.stad-light.light-10 {
+    top: 59.8%;
+    left: 21.95%;
+  }
+  body.hide-tooltips .tt-wrapper.light {
+    display: block !important;
+  }
+  body.hide-tooltips .tt-wrapper.light.christ-light {
+    width: 4.89%;
+    height: 7.1%;
+    top: 44.9%;
+    left: 42.55%;
+    background-image: url("images/redeemer-lights-sprite.png");
+    -webkit-background-size: 400% auto;
+    background-size: 400% auto;
+    background-position: 0% 0;
+    background-repeat: no-repeat;
+    -webkit-animation: redeemerLights 30s infinite;
+    -moz-animation: redeemerLights 30s infinite;
+    -o-animation: redeemerLights 30s infinite;
+    -ms-animation: redeemerLights 30s infinite;
+    animation: redeemerLights 30s infinite;
+  }
+  body.hide-tooltips .tt-wrapper.stad-glow,
+  body.hide-tooltips .tt-wrapper.maracana-glow {
+    display: block !important;
+  }
+  body.hide-tooltips .tt-wrapper.maracana-glow {
+    top: 35.1%;
+    left: 42%;
+    width: 10.95%;
+    height: 2.3%;
+    background-image: url("images/maracana-lights.png");
+    -webkit-background-size: 600% auto;
+    background-size: 600% auto;
+    background-position: 0% 0;
+    background-repeat: no-repeat;
+    -webkit-animation: maracanaLights 10s infinite;
+    -moz-animation: maracanaLights 10s infinite;
+    -o-animation: maracanaLights 10s infinite;
+    -ms-animation: maracanaLights 10s infinite;
+    animation: maracanaLights 10s infinite;
+  }
+  body.hide-tooltips .tt-wrapper.stad-glow {
+    top: 26.2%;
+    left: 32%;
+    width: 10.95%;
+    height: 2.3%;
+    background-image: url("images/stadium-light.png");
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    background-position: 0% 0;
+    background-repeat: no-repeat;
+    -webkit-animation: stadiumLights 8s infinite;
+    -moz-animation: stadiumLights 8s infinite;
+    -o-animation: stadiumLights 8s infinite;
+    -ms-animation: stadiumLights 8s infinite;
+    animation: stadiumLights 8s infinite;
+  }
+  
+  @media (min-width: 767px) {
+    .welcome.mobile {
+      display: block;
+    }
+    .welcome.desktop.show {
+      display: block;
+    }
+    .welcome .window {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -320px;
+      margin-left: -390px;
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+    }
+    .welcome .window .sub-head {
+      padding: 0 70px;
+    }
+  }
+  @media (max-height: 500px) {
+    .welcome.mobile .window .sub-head {
+      font-size: 1.1em;
+      margin: 1em auto;
+    }
+    .welcome.mobile .window .intro-text {
+      font-size: 0.9em;
+      line-height: 1.4em;
+    }
+  }
+  @media (max-width: 1024px) {
+    .touch .welcome.mobile {
+      display: block;
+    }
+    .touch .welcome.mobile .window {
+      position: relative;
+      top: 50%;
+      left: auto;
+      -webkit-transform: translate(0, -50%);
+      -moz-transform: translate(0, -50%);
+      -o-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      margin: 0 auto;
+    }
+    .touch .welcome.desktop.show {
+      display: block;
+    }
+  }
+  @media (-webkit-min-device-pixel-ratio: 2) and (max-width: 768px) {
+    .welcome.mobile {
+      display: block;
+    }
+    .welcome.desktop.show {
+      display: block;
+    }
+  }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    .welcome.mobile {
+      display: block;
+    }
+    .welcome.desktop.show {
+      display: block;
+    }
+  }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    .welcome.mobile {
+      display: block;
+    }
+    .welcome.desktop.show {
+      display: block;
+    }
+  }
+  
+  
+  .no-js {
+    display: block;
+  }
+  
+  .screen1 {
+    display: block;
+    background-color: #242424;
+    width: 100px;
+    height: 75px;
+    left: 18.5%;
+    top: 26%;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: rotate(-27deg) skewX(-27deg) scaleY(0.864);
+  }
+
+  .human-evo {
+    display: block;
+    width: 130px;
+    height: 70px;
+    left: 53%;
+    top: 17.5%;
+    background: url("images/human_evo-Recovered.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+
+  .certificate {
+    display: block;
+    width: 130px;
+    height: 130px;
+    left: 57.5%;
+    top: 16.5%;
+    background: url("images/certificate.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+
+  .earth {
+    display: block;
+    width: 60px;
+    height: 60px;
+    left: 38.8%;
+    top: 36%;
+    background: url("images/gif/world.gif") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+
+  .stone1 {
+    display: block;
+    width: 130px;
+    height: 130px;
+    left: 38.5%;
+    top: 30%;
+    background: url("images/objects/stone1.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: rotate(-5deg)
+  }
+  .stone2 {
+    display: block;
+    width: 130px;
+    height: 130px;
+    left: 38.5%;
+    top: 29%;
+    background: url("images/objects/stone2.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: rotate(-5deg)
+  }
+
+  /* Lift */
+  
+  .lift1 {
+    display: block;
+    width: 70px;
+    height: 140px;
+    left: 50%;
+    top: 14%;
+    background: url("images/icon1x1/16_Lift.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  .lift2 {
+    display: block;
+    width: 70px;
+    height: 140px;
+    left: 50%;
+    top: 14%;
+    background: url("images/icon1x1/16_Lift.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  
+  /* End Lift */
+  
+  /* Dinosaur */
+  
+  .dino101 {
+    display: block;
+    width: 12%;
+    height: 12%;
+    left: 40%;
+    top: 18%;
+    background: url("images/dinosaur/dino101.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: scale(1);
+  }
+  
+  .dino101-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 40%;
+    top: 18%;
+  }
+
+  .dino102 {
+    display: block;
+    width: 10%;
+    height: 10%;
+    left: 40%;
+    top: 16%;
+    background: url("images/dinosaur/dino102.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: scale(1);
+  }
+  
+  .dino102-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 40%;
+    top: 18%;
+  }
+
+  .dino103 {
+    display: block;
+    width: 6%;
+    height: 11%;
+    left: 41%;
+    top: 20%;
+    background: url("images/dinosaur/dino103.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: scale(1);
+  }
+  
+  .dino103-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 38%;
+    top: 22%;
+  }
+
+  .dino104 {
+    display: block;
+    width: 10%;
+    height: 10%;
+    left: 34%;
+    top: 21%;
+    background: url("images/dinosaur/dino104.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: scale(1);
+  }
+  
+  .dino104-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 30%;
+    top: 27%;
+  }
+
+  .dino105 {
+    display: block;
+    width: 9%;
+    height: 15%;
+    left: 39%;
+    top: 16%;
+    background: url("images/dinosaur/dino105.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: scale(1);
+  }
+  
+  .dino105-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 35%;
+    top: 16%;
+  }
+
+  .dino201 {
+    display: block;
+    width: 20%;
+    height: 20%;
+    left: 45.5%;
+    top: 25.5%;
+    background: url("images/gif/dino201.gif") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: scale(1);
+  }
+  
+  .dino201-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 50%;
+    top: 30%;
+  }
+
+  .dino202 {
+    display: block;
+    width: 7%;
+    height: 7%;
+    left: 44%;
+    top: 9%;
+    background: url("images/dinosaur/dino202.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: scale(1);
+  }
+  
+  .dino202-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 43%;
+    top: 10%;
+  }
+
+  .dino301 {
+    display: block;
+    width: 10%;
+    height: 10%;
+    left: 32%;
+    top: 58%;
+    background: url("images/dinosaur/dino301.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: scale(1);
+  }
+  
+  .dino301-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 32%;
+    top: 58%;
+  }
+
+  .dino302 {
+    display: block;
+    width: 10%;
+    height: 10%;
+    left: 36%;
+    top: 80%;
+    background: url("images/dinosaur/dino302.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: scale(1);
+  }
+  
+  .dino302-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 34%;
+    top: 83%;
+  }
+
+  .dino303 {
+    display: block;
+    width: 10%;
+    height: 10%;
+    left: 25%;
+    top: 90%;
+    background: url("images/dinosaur/dino303.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: scale(1);
+  }
+  
+  .dino303-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 25%;
+    top: 92%;
+  }
+  .dino304 {
+    display: block;
+    width: 10%;
+    height: 10%;
+    left: 50%;
+    top: 83%;
+    background: url("images/dinosaur/dino304.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: scale(1);
+  }
+  
+  .dino304-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 25%;
+    top: 92%;
+  }
+
+  .dino305 {
+    display: block;
+    width: 10%;
+    height: 10%;
+    left: 26%;
+    top: 58%;
+    background: url("images/dinosaur/dino305.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: scale(1);
+  }
+  
+  .dino305-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 26%;
+    top: 58%;
+  }
+
+  .dino306 {
+    display: block;
+    width: 10%;
+    height: 10%;
+    left: 20%;
+    top: 82%;
+    background: url("images/dinosaur/dino306.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: scale(1);
+  }
+  
+  .dino306-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 26%;
+    top: 58%;
+  }
+
+  .dino307 {
+    display: block;
+    width: 10%;
+    height: 10%;
+    left: 40%;
+    top: 75%;
+    background: url("images/dinosaur/dino307.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: scale(1);
+  }
+  
+  .dino307-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 26%;
+    top: 58%;
+  }
+
+  /* End Dinosaur */
+  
+  .fish {
+    display: block;
+    width: 5%;
+    height: 7%;
+    left: 55.5%;
+    top: 19%;
+    background: url("images/objects/fish.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: scale(1);
+  }
+  
+  .fish-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 53%;
+    top: 19%;
+  }
+
+  .footprint {
+    display: block;
+    width: 4%;
+    height: 4%;
+    left: 50%;
+    top: 19.5%;
+    background: url("images/objects/footprint.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: scale(1);
+  }
+  
+  .footprint-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 46%;
+    top: 19%;
+  }
+
+  .dinosauria {
+    display: block;
+    width: 7%;
+    height: 7%;
+    left: 30%;
+    top: 63%;
+    background: url("images/objects/dinosauria.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: scale(1);
+  }
+
+  /* Toilet */
+  .toilet101 {
+    display: block;
+    width: 5%;
+    height: 10%;
+    left: 29%;
+    top: 57%;
+    background: url("images/gif/closet_right.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+
+  .toilet102 {
+    display: block;
+    width: 5%;
+    height: 10%;
+    left: 60%;
+    top: 19.5%;
+    background: url("images/gif/closet_left.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  
+  .toilet201 {
+    display: block;
+    width: 5%;
+    height: 10%;
+    left: 65%;
+    top: 22%;
+    background: url("images/gif/closet_left.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  
+  /* End Toilet */
+  
+  /* Icon */
+  
+  .volcano {
+    display: block;
+    width: 8%;
+    height: 11%;
+    left: 27%;
+    top: 21%;
+    background: url("images/objects/volcano.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  .volcano2 {
+    display: block;
+    width: 8%;
+    height: 11%;
+    left: 24%;
+    top: 22.5%;
+    background: url("images/objects/volcano2.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  .earth-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 35%;
+    top: 32%;
+  }
+  .volcano-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 23%;
+    top: 23%;
+  }
+  .origin {
+    display: block;
+    width: 8%;
+    height: 12%;
+    left: 32%;
+    top: 16.5%;
+    background: url("images/objects/origin.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  .animal {
+    display: block;
+    width: 6%;
+    height: 11%;
+    left: 37.5%;
+    top: 12%;
+    background: url("images/objects/animal.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  .animaltag {
+    display: block;
+    width: 4%;
+    height: 8%;
+    left: 40%;
+    top: 13%;
+    background: url("images/objects/animaltag.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  .animaltag2 {
+    display: block;
+    width: 4%;
+    height: 8%;
+    left: 38%;
+    top: 14.5%;
+    background: url("images/objects/animaltag.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  /* End Icon */
+  
+  /* Human */
+  
+  .talk2 {
+    display: block;
+    width: 5%;
+    height: 5%;
+    left: 47%;
+    top: 37%;
+    background: url("images/gif/talk.gif") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+
+  .walk1 {
+    display: block;
+    width: 5%;
+    height: 5%;
+    left: 23%;
+    top: 62.5%;
+    background: url("images/gif/walk.gif") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+
+  .walk2 {
+    display: block;
+    width: 5%;
+    height: 5%;
+    left: 37%;
+    top: 17%;
+    background: url("images/gif/walk.gif") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  
+  .walk2a {
+    display: block;
+    width: 5%;
+    height: 5%;
+    left: 45%;
+    top: 44%;
+    background: url("images/gif/walk.gif") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+
+  .jump1 {
+    display: block;
+    width: 5%;
+    height: 5%;
+    left: 44%;
+    top: 31.5%;
+    background: url("images/gif/jump-g.gif") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  
+  .drink-water-g1 {
+    display: block;
+    width: 5%;
+    height: 5%;
+    left: 47%;
+    top: 29%;
+    background: url("images/gif/drink-water-g.gif") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+
+  .drink-water-g2 {
+    display: block;
+    width: 5%;
+    height: 5%;
+    left: 37%;
+    top: 17%;
+    background: url("images/gif/drink-water-g.gif") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+
+  .human101 {
+    display: block;
+    width: 5%;
+    height: 5%;
+    left: 50%;
+    top: 23%;
+    background: url("images/gif/talk.gif") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+
+  .human102 {
+    display: block;
+    width: 5%;
+    height: 5%;
+    left: 28%;
+    top: 23%;
+    background: url("images/gif/jump-b.gif") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+
+  .human103 {
+    display: block;
+    width: 5%;
+    height: 5%;
+    left: 40%;
+    top: 13%;
+    background: url("images/gif/drink-water-b.gif") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  
+  /* End Human */
+  
+  /* Rooms */
+  .artzone {
+    display: block;
+    width: 7%;
+    height: 9%;
+    left: 54%;
+    top: 21%;
+    background: url("images/objects/artzone.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+
+  /* End Rooms */
+
+  /* Descript */
+  .ticket-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 38%;
+    top: 38%;
+  }
+  
+  .locker-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 39%;
+    top: 45%;
+  }
+  
+  .meeting1-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 64%;
+    top: 38%;
+  }
+  
+  .meeting2-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 76%;
+    top: 41%;
+  }
+
+  .theatre-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 22%;
+    top: 30%;
+  }
+
+  .foodcenter-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 22%;
+    top: 52%;
+  }
+
+  .shop-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 59%;
+    top: 33%;
+  }
+
+  .artzone-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 53%;
+    top: 23%;
+  }
+
+  .eventzone-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 48%;
+    top: 28%;
+  }
+
+  .lab-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 55%;
+    top: 35%;
+  }
+
+  .office-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 60%;
+    top: 50%;
+  }
+
+  .human-evo-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 50%;
+    top: 18%;
+  }
+
+  .hybodonshark-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 45%;
+    top: 15%;
+  }
+
+  .dogbear-info {
+    display: block;
+    width: 9.61%;
+    height: 10%;
+    left: 48%;
+    top: 21%;
+  }
+  
+  /* End Descript */
+
+  /* Arrows */
+  .arrow100 {
+    display: block;
+    width: 40px;
+    height: 110px;
+    left: 52%;
+    top: 19%;
+    background: url("images/icon1x1/arrow_up.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  .arrow101 {
+    display: block;
+    width: 50px;
+    height: 120px;
+    left: 50%;
+    top: 14%;
+    background: url("images/icon1x1/arrow_upleft.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  .arrow102 {
+    display: block;
+    width: 50px;
+    height: 120px;
+    left: 40%;
+    top: 14%;
+    background: url("images/icon1x1/arrow_downleft.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  .arrow103 {
+    display: block;
+    width: 40px;
+    height: 110px;
+    left: 36%;
+    top: 20%;
+    background: url("images/icon1x1/arrow_down.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  .arrow104 {
+    display: block;
+    width: 50px;
+    height: 120px;
+    left: 40%;
+    top: 25%;
+    background: url("images/icon1x1/arrow_downright.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  .arrow105 {
+    display: block;
+    width: 50px;
+    height: 120px;
+    left: 45%;
+    top: 27%;
+    background: url("images/icon1x1/arrow_upright.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  .arrow201 {
+    display: block;
+    width: 50px;
+    height: 120px;
+    left: 45%;
+    top: 33%;
+    background: url("images/icon1x1/arrow_upleft.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  .arrow202 {
+    display: block;
+    width: 50px;
+    height: 120px;
+    left: 39%;
+    top: 29%;
+    background: url("images/icon1x1/arrow_upleft.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  .arrow203 {
+    display: block;
+    width: 40px;
+    height: 110px;
+    left: 37%;
+    top: 20%;
+    background: url("images/icon1x1/arrow_up.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  .arrow204 {
+    display: block;
+    width: 40px;
+    height: 110px;
+    left: 40%;
+    top: 16%;
+    background: url("images/icon1x1/arrow_upright.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  .arrow205 {
+    display: block;
+    width: 40px;
+    height: 110px;
+    left: 54%;
+    top: 19%;
+    background: url("images/icon1x1/arrow_upright.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  .arrow206 {
+    display: block;
+    width: 40px;
+    height: 110px;
+    left: 61%;
+    top: 21%;
+    background: url("images/icon1x1/arrow_downright.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  .godown {
+    display: block;
+    width: 70px;
+    height: 140px;
+    left: 47%;
+    top: 13%;
+    background: url("images/icon1x1/godown.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    animation: bounce 5s infinite 1s;
+  }
+  .goup {
+    display: block;
+    width: 70px;
+    height: 140px;
+    left: 47%;
+    top: 9%;
+    background: url("images/icon1x1/goup.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    animation: bounce 5s infinite 1s;
+  }
+  /* End Arrows */
+
+  /* Landscape */
+  .tree1 {
+    display: block;
+    width: 320px;
+    height: 240px;
+    left: 1%;
+    top: 23%;
+    background: url("images/objects/tree-1.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  .tree5a {
+    display: block;
+    width: 320px;
+    height: 280px;
+    left: 25%;
+    top: 89%;
+    background: url("images/objects/tree-5.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: rotate(0deg) skewX(0deg) scaleY(0.864);
+  }
+  .tree5b {
+    display: block;
+    width: 320px;
+    height: 280px;
+    left: 20%;
+    top: 85%;
+    background: url("images/objects/tree-5.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: rotate(0deg) skewX(0deg) scaleY(0.864);
+  }
+  .tree5c {
+    display: block;
+    width: 320px;
+    height: 280px;
+    left: 15%;
+    top: 80%;
+    background: url("images/objects/tree-5.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: rotate(0deg) skewX(0deg) scaleY(0.864);
+  }
+
+  .garden1 {
+    display: block;
+    width: 30%;
+    height: 30%;
+    left: 30%;
+    top: 66%;
+    background: url("images/objects/garden1.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: rotate(0deg) skewX(0deg) scaleY(0.864);
+  }
+
+  .garden2 {
+    display: block;
+    width: 30%;
+    height: 30%;
+    left: 17%;
+    top: 75%;
+    background: url("images/objects/garden2.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: rotate(0deg) skewX(0deg) scaleY(0.864);
+  }
+  .garden3 {
+    display: block;
+    width: 30%;
+    height: 30%;
+    left: -2%;
+    top: 75%;
+    background: url("images/objects/garden3.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: rotate(0deg) skewX(0deg) scaleY(0.864);
+  }
+
+  .garden4 {
+    display: block;
+    width: 30%;
+    height: 30%;
+    left: -1%;
+    top: 45%;
+    background: url("images/objects/garden4.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: rotate(0deg) skewX(0deg) scaleY(0.864);
+  }
+
+  .garden5 {
+    display: block;
+    width: 30%;
+    height: 30%;
+    left: -1%;
+    top: 25%;
+    background: url("images/objects/garden5.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: rotate(0deg) skewX(0deg) scaleY(0.864);
+  }
+
+  .garden6 {
+    display: block;
+    width: 30%;
+    height: 30%;
+    left: -1%;
+    top: 8%;
+    background: url("images/objects/garden6.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: rotate(0deg) skewX(0deg) scaleY(0.864);
+  }
+
+  .garden6a {
+    display: block;
+    width: 30%;
+    height: 30%;
+    left: -1%;
+    top: 8%;
+    background: url("images/objects/garden6a.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: rotate(0deg) skewX(0deg) scaleY(0.864);
+  }
+
+  .garden7 {
+    display: block;
+    width: 30%;
+    height: 30%;
+    left: 20%;
+    top: -5%;
+    background: url("images/objects/garden7.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: rotate(0deg) skewX(0deg) scaleY(0.864);
+  }
+
+  .garden8 {
+    display: block;
+    width: 30%;
+    height: 30%;
+    left: 50%;
+    top: -5%;
+    background: url("images/objects/garden8.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: rotate(0deg) skewX(0deg) scaleY(0.864);
+  }
+
+  .garden9 {
+    display: block;
+    width: 30%;
+    height: 30%;
+    left: 70%;
+    top: 13%;
+    background: url("images/objects/garden8.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: rotate(0deg) skewX(0deg) scaleY(0.864);
+  }
+
+  .garden10 {
+    display: block;
+    width: 30%;
+    height: 30%;
+    left: 70%;
+    top: -5%;
+    background: url("images/objects/garden8.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    transform: rotate(0deg) skewX(0deg) scaleY(0.864);
+  }
+
+  .billboard-sitemuseum {
+    display: block;
+    width: 290px;
+    height: 300px;
+    left: 82%;
+    top: 73%;
+    background: url("images/objects/billboard_sitemuseum.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+
+  .billboard-sitemuseum2 {
+    display: block;
+    width: 290px;
+    height: 300px;
+    left: 79%;
+    top: 65%;
+    background: url("images/objects/billboard_sitemuseum.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+
+  .floor1tag {
+    display: block;
+    width: 500px;
+    height: 400px;
+    left: 0%;
+    top: 0%;
+    background: url("images/objects/floor1tag.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+
+  .floor2tag {
+    display: block;
+    width: 500px;
+    height: 400px;
+    left: 0%;
+    top: 0%;
+    background: url("images/objects/floor2tag.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+  /* End Landscape */
+
+  .hybodonshark {
+    display: block;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    top: 14%;
+    background: url("images/objects/hybodonshark.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+
+  .dogbear {
+    display: block;
+    width: 120px;
+    height: 120px;
+    left: 50%;
+    top: 18%;
+    background: url("images/objects/dogbear.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+  }
+
+  .noentry {
+    display: block;
+    width: 70px;
+    height: 70px;
+    left: 46%;
+    top: 66%;
+    background: url("images/noentry.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    animation: bounce 3s infinite 1s;
+  }
+
+  .godown2 {
+    display: block;
+    width: 70px;
+    height: 70px;
+    left: 65%;
+    top: 53%;
+    background: url("images/icon1x1/godown.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    animation: bounce 5s infinite 1s;
+  }
+
+  .cam101 {
+    display: block;
+    width: 50px;
+    height: 50px;
+    left: 39%;
+    top: 16%;
+    background: url("images/icon1x1/360cam.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    animation: bounce 4s linear infinite 1s;
+  }
+
+  .cam102 {
+    display: block;
+    width: 50px;
+    height: 50px;
+    left: 40%;
+    top: 28%;
+    background: url("images/icon1x1/360cam.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    animation: bounce 4s linear infinite 1s;
+  }
+
+  .cam201 {
+    display: block;
+    width: 50px;
+    height: 50px;
+    left: 39%;
+    top: 26%;
+    background: url("images/icon1x1/360cam.png") center center no-repeat transparent;
+    -webkit-background-size: 100% auto;
+    background-size: 100% auto;
+    animation: bounce 4s linear infinite 1s;
+  }
+
+  .exitcam {
+    font-size: 27px;
+    color: #db821d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    top: 6%;
+    right: 0.25%;
+    background-color: #606a72;
+    border: 3px solid #ffffff;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  .exitcam a {
+    color:white; 
+    font-family: 'Noto Sans Thai'; 
+    font-size: 18pt;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  /* Animations */
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    6% { transform: translateY(-10px); }
+    12% { transform: translateY(0px); }
+    100% { transform: translateY(0px); }
+}
+@keyframes circle{
+  0% {
+      transform:rotate(0deg) translate(-17px) rotate(0deg);
+  }
+  100% {
+      transform:rotate(360deg) translate(-17px) rotate(-360deg);
+  }
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes popup {
+  0% { transform: scale(0); }
+  70% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+@keyframes opening {
+  from { background-position-x: 0px; }
+  to { background-position-x: -9396px; }
+}
+
+@keyframes mouseOver {
+  0% { background-position-x: 0px; }
+  /* to { background-position-x: -15876px; } */
+  40% { background-position-x: -14256px; }
+  100% { background-position-x: -14256px; }
+}
+
+  /* End Animations */
